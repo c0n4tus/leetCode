@@ -13,7 +13,6 @@ class Solution:
         while node.next != None:
             node=node.next
             count+=1
-        print('from count'+str(count))
         
         if count == 0 and n == 1:
             head=None
@@ -24,11 +23,8 @@ class Solution:
             return nodeToMaintain
             
         for i in range(0,(count-n+1)):
-            print('inside for')
             nodeToMaintain=newHead
             newHead=newHead.next
-        print(newHead.val)
-        print(nodeToMaintain.val)
         if newHead.next == None:
             nodeToMaintain.next=None
             newHead=None
