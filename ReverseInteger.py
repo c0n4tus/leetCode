@@ -1,15 +1,12 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        if x< 0:
-            size=len(str(x))-1
-        else:
-            size=len(str(x))
-       
         y=0
         if x < 0:
+            size=len(str(x))-1
             isAbs=True
             x=abs(x)
         else:
+            size=len(str(x))
             isAbs=False
         while size:
             size=size-1
