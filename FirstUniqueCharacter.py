@@ -17,3 +17,4 @@ class Solution:
             return s.index(ky)
         else:
             return -1
+            
