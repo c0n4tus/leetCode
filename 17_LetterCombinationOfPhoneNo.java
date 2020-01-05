@@ -1,8 +1,8 @@
 class Solution {
     public List<String> letterCombinations(String digits) {
-        List result<String>=new ArrayList<String>();
+        List<String> result=new ArrayList<String>();
         
-        if(digits == null || digits.lenghth() == 0){
+        if(digits == null || digits.length() == 0){
             return result;
         }
         
@@ -25,7 +25,15 @@ class Solution {
     
     public void letterCombinationRec(String digits,List<String> result,String[] map,String current,int index){
 
-    if()
+    if(index == digits.length()){
+        result.add(current);
+        return;
+    }
     
+        String letter = map[Character.getNumericValue(digits.charAt(index))];
+        for(int i=0;i<letter.length();i++){
+            letterCombinationRec(digits,result,map,current+letter.charAt(i),index+1);
+        }
+        
     }
 }
